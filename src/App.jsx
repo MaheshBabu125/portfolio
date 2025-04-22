@@ -19,6 +19,12 @@ function App() {
     if (navItem === "choose") {
       setIsOpen(true);
     }
+    else if (navItem === "linkedin") {
+      window.open("https://www.linkedin.com/in/mahesh-babu-kethineni-3a40a7221/", "_blank");
+    }
+    else if (navItem === "github") {
+      window.open("https://github.com/dashboard", "_blank");
+    }
     // Handle navigation logic here
   };
 

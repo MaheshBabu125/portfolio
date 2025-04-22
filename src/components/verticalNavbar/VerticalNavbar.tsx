@@ -5,7 +5,7 @@ import RulerIcon from '../../assets/icons/Ruler.png';
 import ActiveRuler from '../../assets/icons/OnRuler.png';
 import Skill from '../../assets/icons/Skill.png';
 import ActiveSkill from '../../assets/icons/OnSkill.png';
-import Dribbble from '../../assets/icons/Ruler.png';
+import GitHub from '../../assets/icons/github.png';
 import Experience from '../../assets/icons/Experience.png';
 import OnExperience from '../../assets/icons/OnExperience.png';
 import Choose from '../../assets/icons/choose-person.png';
@@ -83,19 +83,19 @@ const VerticalNavbar = ({ handleButtonClick }) => {
       {/* Dribbble */}
       <div className="relative group">
         <button
-          id="dribbble"
+          id="github"
           type="button"
-          aria-label="Dribbble"
-          aria-pressed={activeItem === 'dribbble'}
-          onClick={() => handleClick('dribbble')}
+          aria-label="github"
+          aria-pressed={activeItem === 'github'}
+          onClick={() => handleClick('github')}
           className={`p-3 rounded-full flex items-center justify-center transition-all duration-300 ${
-            activeItem === 'dribbble' ? 'bg-gray-700 w-12 h-12' : 'bg-transparent'
+            activeItem === 'github' ? 'bg-gray-700 w-12 h-12' : 'bg-transparent'
           }`}
         >
-          <img src={Dribbble} alt="Dribbble" className="w-6 h-6" />
+          <img src={GitHub} alt="github" className="w-6 h-6" />
         </button>
         <span className="absolute left-14 top-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 bg-gray-800 text-white text-xs rounded px-2 py-1 transition-opacity duration-300 z-10">
-          Dribbble
+          Github
         </span>
       </div>
     </div>
