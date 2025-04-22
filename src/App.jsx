@@ -70,7 +70,11 @@ function App() {
         Developed by <span className="text-white font-bold">Mahesh Babu.K</span>
       </p>
 
-      <MysteryModal isOpen={isOpen} onClose={() => setIsOpen(false)}>
+      <MysteryModal isOpen={isOpen} onClose={() => {
+        setIsOpen(false);
+        setNavItem("skills");
+
+      }}>
         <p className="text-gray-300 mb-4">
           You found a special surprise inside!
         </p>
