@@ -1,0 +1,32 @@
+/* index.css */
+@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+    .shine-glow {
+      @apply animate-[shine_1.5s_infinite_ease-in-out];
+    }
+  
+    @keyframes shine {
+      0% {
+        box-shadow: 0 0 5px #A9AEB9, 0 0 10px #A9AEB9, 0 0 15px #A9AEB9;
+      }
+      50% {
+        box-shadow: 0 0 10px #ffffff, 0 0 20px #A9AEB9, 0 0 30px #A9AEB9;
+      }
+      100% {
+        box-shadow: 0 0 5px #A9AEB9, 0 0 10px #A9AEB9, 0 0 15px #A9AEB9;
+      }
+    }
+  }
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+        'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+        sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: #141414;
+}

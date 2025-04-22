@@ -1,0 +1,8 @@
+
+  .mainContainer {
+    background: 'linear-gradient(357deg, #15161A 64%, #656A7B 135%, #15161A 100%)';
+    padding: '10px';
+    border: '1px solid transparent';
+    border-image: linear-gradient(357deg, #15161A 64%, #656A7B 135%, #15161A 100%);
+    border-image-slice: 1
+  }
