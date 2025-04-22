@@ -8,16 +8,24 @@ const HireMeForm = () => {
     control,
     formState: { errors, isValid },
     reset,
+    setValue,
   } = useForm({ mode: 'onChange' });
 
   const onSubmit = (data) => {
-    // FormSubmit will handle the sending to your email
+    // Set the hidden form values to the data from React Hook Form
+    document.getElementById('real-form').querySelector('input[name="name"]').value = data.name;
+    document.getElementById('real-form').querySelector('input[name="email"]').value = data.email;
+    document.getElementById('real-form').querySelector('input[name="message"]').value = data.message;
+
+    // Submit the real hidden form
     document.getElementById('real-form').submit();
+
+    // Reset the form after submission
     reset();
   };
 
   return (
-    <section className=" text-white py-20 px-6 md:px-12">
+    <section className="text-white py-20 px-6 md:px-12">
       <div className="w-200 mx-auto bg-white/5 backdrop-blur-lg border border-white/10 rounded-3xl p-10 shadow-xl">
         <h2 className="text-3xl font-bold mb-4 text-center">Hire Me</h2>
         <p className="text-center text-gray-400 mb-6">
@@ -26,8 +34,6 @@ const HireMeForm = () => {
 
         <form
           onSubmit={handleSubmit(onSubmit)}
-          action="https://formsubmit.co/maheshbabukethineni@gmail.com"
-          method="POST"
           className="space-y-5"
         >
           {/* Protect against spam */}
